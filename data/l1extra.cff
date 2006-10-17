@@ -1,0 +1,46 @@
+# For now, you must "setenv DTTF_DATA_PATH $CMSSW_RELEASE_BASE/src/L1Trigger/DTTrackFinder/parameters/" before running.
+
+#
+# Calo emulator
+#
+
+include "L1Trigger/GlobalCaloTrigger/data/l1CaloEmuDigis.cff"
+
+#
+# Muon emulator
+#
+
+include "Geometry/CSCGeometry/data/cscGeometry.cfi"
+include "Geometry/DTGeometry/data/dtGeometry.cfi"
+include "Geometry/RPCGeometry/data/rpcGeometry.cfi" 
+
+module dttrigprod = DTTrigProd{}
+module dttf = DTTrackFinder{}
+include "L1Trigger/CSCTriggerPrimitives/data/CSCTriggerPrimitivesProducer.cfi"
+include "L1Trigger/CSCTrackFinder/data/CSCTrackFinder.cfi"
+include "L1Trigger/RPCTrigger/data/RPCTrigger.cfi"
+
+sequence dttrig = { dttrigprod, dttf }
+sequence csctrig = { lctproducer, csc_tf_cands }
+sequence l1mutrig = { dttrig & csctrig & rpctrig }
+
+include "L1Trigger/GlobalMuonTrigger/data/gmt.cfi"
+replace gmt.BX_min = -1
+replace gmt.BX_max = 1
+replace gmt.BX_min_readout = -1
+replace gmt.BX_max_readout = 1
+
+
+#
+# L1Extra
+#
+
+include "L1Trigger/L1ExtraFromDigis/data/l1extraParticles.cfi"
+include "L1Trigger/L1ExtraFromDigis/data/l1extraParticleMap.cfi"
+
+#
+# Sequence definitions
+#
+
+sequence l1emulator = { L1CaloEmuDigis, l1mutrig, gmt }
+sequence l1extra = { l1extraParticles, l1extraParticleMap }
