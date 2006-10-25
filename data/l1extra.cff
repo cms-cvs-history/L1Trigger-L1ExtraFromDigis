@@ -10,10 +10,6 @@ include "L1Trigger/GlobalCaloTrigger/data/L1CaloEmuDigis.cff"
 # Muon emulator
 #
 
-#include "Geometry/CSCGeometry/data/cscGeometry.cfi"
-#include "Geometry/DTGeometry/data/dtGeometry.cfi"
-#include "Geometry/RPCGeometry/data/rpcGeometry.cfi" 
-
 include "L1Trigger/GlobalMuonTrigger/data/l1muon.cff"
 
 #
