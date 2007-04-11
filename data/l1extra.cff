@@ -10,6 +10,8 @@ include "L1Trigger/GlobalCaloTrigger/data/L1CaloEmuDigis.cff"
 # Muon emulator
 #
 
+include "Geometry/MuonNumbering/data/muonNumberingInitialization.cfi"
+include "L1TriggerConfig/RPCTriggerConfig/data/RPCPatSource.cfi"
 include "L1Trigger/GlobalMuonTrigger/data/l1muon.cff"
 
 #
