@@ -11,6 +11,8 @@ module l1extraParticleMap = L1ExtraParticleMapProd {
 
 	double A_SingleMu3_thresh = 3.
 	int32 A_SingleMu3_prescale = 1000
+	double A_SingleMu7_thresh = 7.
+	int32 A_SingleMu7_prescale = 300
 	double A_SingleMu10_thresh = 10.
 	int32 A_SingleMu10_prescale = 100
 	double A_SingleMu14_thresh = 14.
@@ -91,7 +93,9 @@ module l1extraParticleMap = L1ExtraParticleMapProd {
 	int32 A_ETM60_prescale = 1
 
 	double A_DoubleMu3_thresh = 3.
+	int32 A_DoubleMu3_prescale = 1
 	double A_DoubleIsoEG10_thresh = 10.
+	int32 A_DoubleIsoEG10_prescale = 1
 
 	double A_DoubleEG5_thresh = 5.
 	int32 A_DoubleEG5_prescale = 10000
@@ -99,18 +103,22 @@ module l1extraParticleMap = L1ExtraParticleMapProd {
 	int32 A_DoubleEG20_prescale = 1
 
 	double A_DoubleJet100_thresh = 100.
+	int32 A_DoubleJet100_prescale = 1
 
 	double A_DoubleTauJet20_thresh = 20.
 	int32 A_DoubleTauJet20_prescale = 20
 	double A_DoubleTauJet30_thresh = 30.
 	int32 A_DoubleTauJet30_prescale = 10
-	double A_DoubleTauJet40_thresh = 40.
-	int32 A_DoubleTauJet40_prescale = 1
 
+	double A_Mu3_IsoEG5_thresh1 = 3.
+	double A_Mu3_IsoEG5_thresh2 = 5.
+	int32 A_Mu3_IsoEG5_prescale = 20
 	double A_Mu3_IsoEG15_thresh1 = 3.
 	double A_Mu3_IsoEG15_thresh2 = 15.
+	int32 A_Mu3_IsoEG15_prescale = 1
 	double A_Mu3_EG20_thresh1 = 3.
 	double A_Mu3_EG20_thresh2 = 20.
+	int32 A_Mu3_EG20_prescale = 1
 
 	double A_Mu3_Jet15_thresh1 = 3.
 	double A_Mu3_Jet15_thresh2 = 15.
@@ -122,15 +130,16 @@ module l1extraParticleMap = L1ExtraParticleMapProd {
 	double A_Mu10_Jet20_thresh2 = 20.
 	int32 A_Mu10_Jet20_prescale = 1
 
-	double A_Mu3_TauJet20_thresh1 = 3.
-	double A_Mu3_TauJet20_thresh2 = 20.
-	int32 A_Mu3_TauJet20_prescale = 20
-	double A_Mu3_TauJet30_thresh1 = 3.
-	double A_Mu3_TauJet30_thresh2 = 30.
-	int32 A_Mu3_TauJet30_prescale = 1
+	double A_Mu7_TauJet20_thresh1 = 7.
+	double A_Mu7_TauJet20_thresh2 = 20.
+	int32 A_Mu7_TauJet20_prescale = 1
+	double A_Mu7_TauJet30_thresh1 = 7.
+	double A_Mu7_TauJet30_thresh2 = 30.
+	int32 A_Mu7_TauJet30_prescale = 1
 
 	double A_IsoEG10_EG10_thresh1 = 10.
 	double A_IsoEG10_EG10_thresh2 = 10.
+	int32 A_IsoEG10_EG10_prescale = 1
 
 	double A_IsoEG10_Jet15_thresh1 = 10.
 	double A_IsoEG10_Jet15_thresh2 = 15.
@@ -159,35 +168,42 @@ module l1extraParticleMap = L1ExtraParticleMapProd {
 	double A_EG20_Jet100_thresh2 = 100.
 	int32 A_EG20_Jet100_prescale = 1
 
-	double A_EG10_TauJet20_thresh1 = 10.
-	double A_EG10_TauJet20_thresh2 = 20.
-	int32 A_EG10_TauJet20_prescale = 30
-	double A_EG10_TauJet30_thresh1 = 10.
-	double A_EG10_TauJet30_thresh2 = 30.
-	int32 A_EG10_TauJet30_prescale = 20
+	double A_EG20_TauJet40_thresh1 = 20.
+	double A_EG20_TauJet40_thresh2 = 40.
+	int32 A_EG20_TauJet40_prescale = 1
 
 	double A_Jet100_TauJet40_thresh1 = 100.
 	double A_Jet100_TauJet40_thresh2 = 40.
+	int32 A_Jet100_TauJet40_prescale = 1
 
 	double A_Mu3_HTT300_thresh1 = 3.
 	double A_Mu3_HTT300_thresh2 = 300.
+	int32 A_Mu3_HTT300_prescale = 1
 	double A_IsoEG15_HTT300_thresh1 = 15.
 	double A_IsoEG15_HTT300_thresh2 = 300.
+	int32 A_IsoEG15_HTT300_prescale = 1
 	double A_EG20_HTT300_thresh1 = 20.
 	double A_EG20_HTT300_thresh2 = 300.
+	int32 A_EG20_HTT300_prescale = 1
 	double A_Jet100_HTT300_thresh1 = 100.
 	double A_Jet100_HTT300_thresh2 = 300.
+	int32 A_Jet100_HTT300_prescale = 1
 	double A_TauJet40_HTT300_thresh1 = 40.
 	double A_TauJet40_HTT300_thresh2 = 300.
+	int32 A_TauJet40_HTT300_prescale = 1
 
 	double A_Mu3_ETM30_thresh1 = 3.
 	double A_Mu3_ETM30_thresh2 = 30.
+	int32 A_Mu3_ETM30_prescale = 1
 	double A_IsoEG15_ETM30_thresh1 = 15.
 	double A_IsoEG15_ETM30_thresh2 = 30.
+	int32 A_IsoEG15_ETM30_prescale = 1
 	double A_EG20_ETM30_thresh1 = 20.
 	double A_EG20_ETM30_thresh2 = 30.
+	int32 A_EG20_ETM30_prescale = 1
 	double A_Jet100_ETM40_thresh1 = 100.
 	double A_Jet100_ETM40_thresh2 = 40.
+	int32 A_Jet100_ETM40_prescale = 1
 
 	double A_TauJet20_ETM20_thresh1 = 20.
 	double A_TauJet20_ETM20_thresh2 = 20.
@@ -198,44 +214,66 @@ module l1extraParticleMap = L1ExtraParticleMapProd {
 
 	double A_HTT200_ETM40_thresh1 = 200.
 	double A_HTT200_ETM40_thresh2 = 40.
+	int32 A_HTT200_ETM40_prescale = 1
 
 	double A_TripleMu3_thresh = 3.
+	int32 A_TripleMu3_prescale = 1
 	double A_TripleIsoEG5_thresh = 5.
+	int32 A_TripleIsoEG5_prescale = 1
 	double A_TripleEG10_thresh = 10.
+	int32 A_TripleEG10_prescale = 1
 	double A_TripleJet50_thresh = 50.
+	int32 A_TripleJet50_prescale = 1
 	double A_TripleTauJet40_thresh = 40.
+	int32 A_TripleTauJet40_prescale = 1
+
 	double A_DoubleMu3_IsoEG5_thresh1 = 3.
 	double A_DoubleMu3_IsoEG5_thresh2 = 5.
+	int32 A_DoubleMu3_IsoEG5_prescale = 1
 	double A_DoubleMu3_EG10_thresh1 = 3.
 	double A_DoubleMu3_EG10_thresh2 = 10.
+	int32 A_DoubleMu3_EG10_prescale = 1
 	double A_DoubleIsoEG5_Mu3_thresh1 = 5.
 	double A_DoubleIsoEG5_Mu3_thresh2 = 3.
+	int32 A_DoubleIsoEG5_Mu3_prescale = 1
 	double A_DoubleEG10_Mu3_thresh1 = 10.
 	double A_DoubleEG10_Mu3_thresh2 = 3.
+	int32 A_DoubleEG10_Mu3_prescale = 1
 
 	double A_DoubleMu3_HTT200_thresh1 = 3.
 	double A_DoubleMu3_HTT200_thresh2 = 200.
+	int32 A_DoubleMu3_HTT200_prescale = 1
 	double A_DoubleIsoEG5_HTT200_thresh1 = 5.
 	double A_DoubleIsoEG5_HTT200_thresh2 = 200.
+	int32 A_DoubleIsoEG5_HTT200_prescale = 1
 	double A_DoubleEG10_HTT200_thresh1 = 10.
 	double A_DoubleEG10_HTT200_thresh2 = 200.
+	int32 A_DoubleEG10_HTT200_prescale = 1
 	double A_DoubleJet50_HTT200_thresh1 = 50.
 	double A_DoubleJet50_HTT200_thresh2 = 200.
+	int32 A_DoubleJet50_HTT200_prescale = 1
 	double A_DoubleTauJet40_HTT200_thresh1 = 40.
 	double A_DoubleTauJet40_HTT200_thresh2 = 200.
+	int32 A_DoubleTauJet40_HTT200_prescale = 1
 
 	double A_DoubleMu3_ETM20_thresh1 = 3.
 	double A_DoubleMu3_ETM20_thresh2 = 20.
+	int32 A_DoubleMu3_ETM20_prescale = 1
 	double A_DoubleIsoEG5_ETM20_thresh1 = 5.
 	double A_DoubleIsoEG5_ETM20_thresh2 = 20.
+	int32 A_DoubleIsoEG5_ETM20_prescale = 1
 	double A_DoubleEG10_ETM20_thresh1 = 10.
 	double A_DoubleEG10_ETM20_thresh2 = 20.
+	int32 A_DoubleEG10_ETM20_prescale = 1
 	double A_DoubleJet50_ETM20_thresh1 = 50.
 	double A_DoubleJet50_ETM20_thresh2 = 20.
+	int32 A_DoubleJet50_ETM20_prescale = 1
 	double A_DoubleTauJet40_ETM20_thresh1 = 40.
 	double A_DoubleTauJet40_ETM20_thresh2 = 20.
+	int32 A_DoubleTauJet40_ETM20_prescale = 1
 
 	double A_QuadJet50_thresh = 50.
+	int32 A_QuadJet50_prescale = 1
 
 	int32 A_MinBias_HTT10_prescale = 1000000000
 	int32 A_ZeroBias_prescale = 1000000000
