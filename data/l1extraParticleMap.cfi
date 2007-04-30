@@ -272,8 +272,8 @@ module l1extraParticleMap = L1ExtraParticleMapProd {
 	double A_DoubleTauJet40_ETM20_thresh2 = 20.
 	int32 A_DoubleTauJet40_ETM20_prescale = 1
 
-	double A_QuadJet50_thresh = 50.
-	int32 A_QuadJet50_prescale = 1
+	double A_QuadJet20_thresh = 20.
+	int32 A_QuadJet20_prescale = 1
 
 	int32 A_MinBias_HTT10_prescale = 1000000000
 	int32 A_ZeroBias_prescale = 1000000000
