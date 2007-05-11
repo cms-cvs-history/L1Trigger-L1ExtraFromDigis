@@ -27,7 +27,7 @@ module l1extraParticleMap = L1ExtraParticleMapProd {
 	double A_SingleIsoEG10_thresh = 10.
 	int32 A_SingleIsoEG10_prescale = 100
 	double A_SingleIsoEG15_thresh = 15.
-	int32 A_SingleIsoEG15_prescale = 10
+	int32 A_SingleIsoEG15_prescale = 1
 	double A_SingleIsoEG20_thresh = 20.
 	int32 A_SingleIsoEG20_prescale = 1
 	double A_SingleIsoEG25_thresh = 25.
@@ -48,10 +48,12 @@ module l1extraParticleMap = L1ExtraParticleMapProd {
 	int32 A_SingleJet15_prescale = 300000
 	double A_SingleJet20_thresh = 20.
 	int32 A_SingleJet20_prescale = 100000
+	double A_SingleJet30_thresh = 30.
+	int32 A_SingleJet30_prescale = 10000
 	double A_SingleJet50_thresh = 50.
 	int32 A_SingleJet50_prescale = 1000
 	double A_SingleJet100_thresh = 100.
-	int32 A_SingleJet100_prescale = 100
+	int32 A_SingleJet100_prescale = 10
 	double A_SingleJet150_thresh = 150.
 	int32 A_SingleJet150_prescale = 1
 	double A_SingleJet200_thresh = 200.
@@ -66,7 +68,7 @@ module l1extraParticleMap = L1ExtraParticleMapProd {
 	double A_SingleTauJet40_thresh = 40.
 	int32 A_SingleTauJet40_prescale = 1000
 	double A_SingleTauJet80_thresh = 80.
-	int32 A_SingleTauJet80_prescale = 100
+	int32 A_SingleTauJet80_prescale = 1
 	double A_SingleTauJet100_thresh = 100.
 	int32 A_SingleTauJet100_prescale = 1
 
@@ -86,9 +88,9 @@ module l1extraParticleMap = L1ExtraParticleMapProd {
 	double A_ETM30_thresh = 30.
 	int32 A_ETM30_prescale = 1000
 	double A_ETM40_thresh = 40.
-	int32 A_ETM40_prescale = 100
+	int32 A_ETM40_prescale = 10
 	double A_ETM50_thresh = 50.
-	int32 A_ETM50_prescale = 10
+	int32 A_ETM50_prescale = 1
 	double A_ETM60_thresh = 60.
 	int32 A_ETM60_prescale = 1
 
@@ -99,16 +101,16 @@ module l1extraParticleMap = L1ExtraParticleMapProd {
 
 	double A_DoubleEG5_thresh = 5.
 	int32 A_DoubleEG5_prescale = 10000
-	double A_DoubleEG20_thresh = 20.
-	int32 A_DoubleEG20_prescale = 1
+	double A_DoubleEG15_thresh = 15.
+	int32 A_DoubleEG15_prescale = 1
 
 	double A_DoubleJet100_thresh = 100.
 	int32 A_DoubleJet100_prescale = 1
 
 	double A_DoubleTauJet20_thresh = 20.
-	int32 A_DoubleTauJet20_prescale = 20
+	int32 A_DoubleTauJet20_prescale = 1
 	double A_DoubleTauJet30_thresh = 30.
-	int32 A_DoubleTauJet30_prescale = 10
+	int32 A_DoubleTauJet30_prescale = 1
 
 	double A_Mu3_IsoEG5_thresh1 = 3.
 	double A_Mu3_IsoEG5_thresh2 = 5.
@@ -144,6 +146,9 @@ module l1extraParticleMap = L1ExtraParticleMapProd {
 	double A_IsoEG10_Jet15_thresh1 = 10.
 	double A_IsoEG10_Jet15_thresh2 = 15.
 	int32 A_IsoEG10_Jet15_prescale = 20
+	double A_IsoEG10_Jet30_thresh1 = 10.
+	double A_IsoEG10_Jet30_thresh2 = 30.
+	int32 A_IsoEG10_Jet30_prescale = 1
 	double A_IsoEG15_Jet20_thresh1 = 15.
 	double A_IsoEG15_Jet20_thresh2 = 20.
 	int32 A_IsoEG15_Jet20_prescale = 1
@@ -153,10 +158,10 @@ module l1extraParticleMap = L1ExtraParticleMapProd {
 
 	double A_IsoEG10_TauJet20_thresh1 = 10.
 	double A_IsoEG10_TauJet20_thresh2 = 20.
-	int32 A_IsoEG10_TauJet20_prescale = 20
+	int32 A_IsoEG10_TauJet20_prescale = 1
 	double A_IsoEG10_TauJet30_thresh1 = 10.
 	double A_IsoEG10_TauJet30_thresh2 = 30.
-	int32 A_IsoEG10_TauJet30_prescale = 10
+	int32 A_IsoEG10_TauJet30_prescale = 1
 
 	double A_EG10_Jet15_thresh1 = 10.
 	double A_EG10_Jet15_thresh2 = 15.
@@ -207,10 +212,10 @@ module l1extraParticleMap = L1ExtraParticleMapProd {
 
 	double A_TauJet20_ETM20_thresh1 = 20.
 	double A_TauJet20_ETM20_thresh2 = 20.
-	int32 A_TauJet20_ETM20_prescale = 10
+	int32 A_TauJet20_ETM20_prescale = 1
 	double A_TauJet30_ETM30_thresh1 = 30.
 	double A_TauJet30_ETM30_thresh2 = 30.
-	int32 A_TauJet30_ETM30_prescale = 10
+	int32 A_TauJet30_ETM30_prescale = 1
 
 	double A_HTT200_ETM40_thresh1 = 200.
 	double A_HTT200_ETM40_thresh2 = 40.
@@ -272,8 +277,8 @@ module l1extraParticleMap = L1ExtraParticleMapProd {
 	double A_DoubleTauJet40_ETM20_thresh2 = 20.
 	int32 A_DoubleTauJet40_ETM20_prescale = 1
 
-	double A_QuadJet20_thresh = 20.
-	int32 A_QuadJet20_prescale = 1
+	double A_QuadJet30_thresh = 30.
+	int32 A_QuadJet30_prescale = 1
 
 	int32 A_MinBias_HTT10_prescale = 1000000000
 	int32 A_ZeroBias_prescale = 1000000000
