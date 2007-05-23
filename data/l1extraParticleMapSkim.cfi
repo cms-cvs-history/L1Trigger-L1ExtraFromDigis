@@ -11,6 +11,8 @@ module l1extraParticleMapSkim = L1ExtraParticleMapProd {
 
 	double A_SingleMu3_thresh = 3.
 	int32 A_SingleMu3_prescale = 1
+	double A_SingleMu5_thresh = 5.
+	int32 A_SingleMu5_prescale = 1
 	double A_SingleMu7_thresh = 7.
 	int32 A_SingleMu7_prescale = 1
 	double A_SingleMu10_thresh = 10.
@@ -24,8 +26,12 @@ module l1extraParticleMapSkim = L1ExtraParticleMapProd {
 
 	double A_SingleIsoEG5_thresh = 5.
 	int32 A_SingleIsoEG5_prescale = 10
+	double A_SingleIsoEG8_thresh = 8.
+	int32 A_SingleIsoEG8_prescale = 1
 	double A_SingleIsoEG10_thresh = 10.
 	int32 A_SingleIsoEG10_prescale = 1
+	double A_SingleIsoEG12_thresh = 12.
+	int32 A_SingleIsoEG12_prescale = 1
 	double A_SingleIsoEG15_thresh = 15.
 	int32 A_SingleIsoEG15_prescale = 1
 	double A_SingleIsoEG20_thresh = 20.
@@ -52,6 +58,8 @@ module l1extraParticleMapSkim = L1ExtraParticleMapProd {
 	int32 A_SingleJet30_prescale = 1
 	double A_SingleJet50_thresh = 50.
 	int32 A_SingleJet50_prescale = 1
+	double A_SingleJet70_thresh = 70.
+	int32 A_SingleJet70_prescale = 1
 	double A_SingleJet100_thresh = 100.
 	int32 A_SingleJet100_prescale = 1
 	double A_SingleJet150_thresh = 150.
@@ -96,14 +104,21 @@ module l1extraParticleMapSkim = L1ExtraParticleMapProd {
 
 	double A_DoubleMu3_thresh = 3.
 	int32 A_DoubleMu3_prescale = 1
+
+	double A_DoubleIsoEG8_thresh = 8.
+	int32 A_DoubleIsoEG8_prescale = 1
 	double A_DoubleIsoEG10_thresh = 10.
 	int32 A_DoubleIsoEG10_prescale = 1
 
 	double A_DoubleEG5_thresh = 5.
 	int32 A_DoubleEG5_prescale = 1
+	double A_DoubleEG10_thresh = 10.
+	int32 A_DoubleEG10_prescale = 1
 	double A_DoubleEG15_thresh = 15.
 	int32 A_DoubleEG15_prescale = 1
 
+	double A_DoubleJet70_thresh = 70.
+	int32 A_DoubleJet70_prescale = 1
 	double A_DoubleJet100_thresh = 100.
 	int32 A_DoubleJet100_prescale = 1
 
@@ -111,6 +126,8 @@ module l1extraParticleMapSkim = L1ExtraParticleMapProd {
 	int32 A_DoubleTauJet20_prescale = 1
 	double A_DoubleTauJet30_thresh = 30.
 	int32 A_DoubleTauJet30_prescale = 1
+	double A_DoubleTauJet40_thresh = 40.
+	int32 A_DoubleTauJet40_prescale = 1
 
 	double A_Mu3_IsoEG5_thresh1 = 3.
 	double A_Mu3_IsoEG5_thresh2 = 5.
@@ -125,6 +142,9 @@ module l1extraParticleMapSkim = L1ExtraParticleMapProd {
 	double A_Mu3_Jet15_thresh1 = 3.
 	double A_Mu3_Jet15_thresh2 = 15.
 	int32 A_Mu3_Jet15_prescale = 1
+	double A_Mu7_Jet15_thresh1 = 7.
+	double A_Mu7_Jet15_thresh2 = 15.
+	int32 A_Mu7_Jet15_prescale = 1
 	double A_Mu3_Jet100_thresh1 = 3.
 	double A_Mu3_Jet100_thresh2 = 100.
 	int32 A_Mu3_Jet100_prescale = 1
