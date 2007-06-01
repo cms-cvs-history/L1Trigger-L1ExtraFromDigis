@@ -133,7 +133,7 @@ module l1extraParticleMap = L1ExtraParticleMapProd {
 
 	double A_Mu3_IsoEG5_thresh1 = 3.
 	double A_Mu3_IsoEG5_thresh2 = 5.
-	int32 A_Mu3_IsoEG5_prescale = 20
+	int32 A_Mu3_IsoEG5_prescale = 1
 	double A_Mu7_IsoEG10_thresh1 = 7.
 	double A_Mu7_IsoEG10_thresh2 = 10.
 	int32 A_Mu7_IsoEG10_prescale = 1
