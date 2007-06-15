@@ -1,0 +1,27 @@
+# For use with 1_2_0_pre2
+
+#
+# Calo emulator
+#
+
+include "L1Trigger/GlobalCaloTrigger/data/L1CaloEmuDigis.cff"
+
+#
+# Muon emulator
+#
+
+include "L1Trigger/GlobalMuonTrigger/data/l1muon.cff"
+
+#
+# L1Extra
+#
+
+include "L1Trigger/L1ExtraFromDigis/data/l1extraParticles.cfi"
+include "L1Trigger/L1ExtraFromDigis/data/l1extraParticleMapAlt.cfi"
+
+#
+# Sequence definitions
+#
+
+sequence l1emulator = { L1CaloEmuDigis, l1muon }
+sequence l1extra = { l1extraParticles, l1extraParticleMap }
