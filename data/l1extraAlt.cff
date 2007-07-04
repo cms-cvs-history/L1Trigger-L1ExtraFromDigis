@@ -16,7 +16,7 @@ include "L1Trigger/GlobalMuonTrigger/data/l1muon.cff"
 # L1Extra
 #
 
-include "L1Trigger/L1ExtraFromDigis/data/l1extraParticles.cfi"
+include "L1Trigger/L1ExtraFromDigis/data/l1extraParticles.cff"
 include "L1Trigger/L1ExtraFromDigis/data/l1extraParticleMapAlt.cfi"
 
 #
