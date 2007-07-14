@@ -10,9 +10,9 @@ module l1extraParticleMap = L1ExtraParticleMapProd {
 	// All thresholds in GeV
 
 	double L1_SingleMu3_thresh = 3.
-	int32 L1_SingleMu3_prescale = 1000
+	int32 L1_SingleMu3_prescale = 4000
 	double L1_SingleMu5_thresh = 5.
-	int32 L1_SingleMu5_prescale = 1000
+	int32 L1_SingleMu5_prescale = 2000
 	double L1_SingleMu7_thresh = 7.
 	int32 L1_SingleMu7_prescale = 1
 	double L1_SingleMu10_thresh = 10.
@@ -314,6 +314,17 @@ module l1extraParticleMap = L1ExtraParticleMapProd {
 
 	double L1_QuadJet30_thresh = 30.
 	int32 L1_QuadJet30_prescale = 1
+
+        double L1_ExclusiveDoubleIsoEG6_thresh = 6.
+	int32 L1_ExclusiveDoubleIsoEG6_prescale = 1
+        double L1_ExclusiveDoubleJet10_thresh = 10.
+	int32 L1_ExclusiveDoubleJet10_prescale = 1
+        double L1_ExclusiveJet20_Gap_Jet20_thresh = 10.
+	int32 L1_ExclusiveJet20_Gap_Jet20_prescale = 1
+        double L1_IsoEG15_Jet20_ForJet10_thresh1 = 15.
+        double L1_IsoEG15_Jet20_ForJet10_thresh2 = 20.
+        double L1_IsoEG15_Jet20_ForJet10_thresh3 = 10.
+	int32 L1_IsoEG15_Jet20_ForJet10_prescale = 1
 
 	int32 L1_MinBias_HTT10_prescale = 3000000
 	int32 L1_ZeroBias_prescale = 3000000
