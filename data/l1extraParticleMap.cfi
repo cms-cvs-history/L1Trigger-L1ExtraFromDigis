@@ -317,7 +317,7 @@ module l1extraParticleMap = L1ExtraParticleMapProd {
 
         double L1_ExclusiveDoubleIsoEG6_thresh = 6.
 	int32 L1_ExclusiveDoubleIsoEG6_prescale = 1
-        double L1_ExclusiveDoubleJet10_thresh = 10.
+        double L1_ExclusiveDoubleJet10_thresh = 50.
 	int32 L1_ExclusiveDoubleJet10_prescale = 1
         double L1_ExclusiveJet20_Gap_Jet20_thresh = 10.
 	int32 L1_ExclusiveJet20_Gap_Jet20_prescale = 1
