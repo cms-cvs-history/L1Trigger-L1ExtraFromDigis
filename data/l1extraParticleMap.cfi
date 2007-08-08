@@ -322,16 +322,17 @@ module l1extraParticleMap = L1ExtraParticleMapProd {
 	double L1_QuadJet30_thresh = 30.
 	int32 L1_QuadJet30_prescale = 1
 
-        double L1_ExclusiveDoubleIsoEG6_thresh = 6.
-	int32 L1_ExclusiveDoubleIsoEG6_prescale = 1
-        double L1_ExclusiveDoubleJet50_thresh = 50.
-	int32 L1_ExclusiveDoubleJet50_prescale = 1
-        double L1_ExclusiveJet20_Gap_Jet20_thresh = 10.
-	int32 L1_ExclusiveJet20_Gap_Jet20_prescale = 1
-        double L1_IsoEG15_Jet20_ForJet10_thresh1 = 15.
-        double L1_IsoEG15_Jet20_ForJet10_thresh2 = 20.
-        double L1_IsoEG15_Jet20_ForJet10_thresh3 = 10.
-	int32 L1_IsoEG15_Jet20_ForJet10_prescale = 1
+        double L1_ExclusiveDoubleIsoEG4_thresh1 = 4.
+        double L1_ExclusiveDoubleIsoEG4_thresh2 = 10.
+        int32 L1_ExclusiveDoubleIsoEG4_prescale = 1
+        double L1_ExclusiveDoubleJet60_thresh = 60.
+        int32 L1_ExclusiveDoubleJet60_prescale = 1
+        double L1_ExclusiveJet25_Gap_Jet25_thresh = 25.
+        int32 L1_ExclusiveJet25_Gap_Jet25_prescale = 1
+        double L1_IsoEG10_Jet20_ForJet10_thresh1 = 10.
+        double L1_IsoEG10_Jet20_ForJet10_thresh2 = 20.
+        double L1_IsoEG10_Jet20_ForJet10_thresh3 = 10.
+        int32 L1_IsoEG10_Jet20_ForJet10_prescale = 1
 
 	int32 L1_MinBias_HTT10_prescale = 3000000
 	int32 L1_ZeroBias_prescale = 3000000
