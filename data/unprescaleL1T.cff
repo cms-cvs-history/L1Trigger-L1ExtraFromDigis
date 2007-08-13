@@ -47,15 +47,15 @@
 	replace l1extraParticleMap.L1_HTT400_prescale = 1
 	replace l1extraParticleMap.L1_HTT500_prescale = 1
 
-	replace l1extraParticleMap.L1_ETM10_prescale = 1
-	replace l1extraParticleMap.L1_ETM15_prescale = 1
+	//replace l1extraParticleMap.L1_ETM10_prescale = 1
+	//replace l1extraParticleMap.L1_ETM15_prescale = 1
 	replace l1extraParticleMap.L1_ETM20_prescale = 1
 	replace l1extraParticleMap.L1_ETM30_prescale = 1
 	replace l1extraParticleMap.L1_ETM40_prescale = 1
 	replace l1extraParticleMap.L1_ETM50_prescale = 1
 	replace l1extraParticleMap.L1_ETM60_prescale = 1
 
-	replace l1extraParticleMap.L1_ETT60_prescale = 1
+	//replace l1extraParticleMap.L1_ETT60_prescale = 1
 
 	replace l1extraParticleMap.L1_DoubleMu3_prescale = 1
 
@@ -146,7 +146,8 @@
 
 	replace l1extraParticleMap.L1_QuadJet30_prescale = 1
 
-        replace l1extraParticleMap.L1_ExclusiveDoubleIsoEG4_prescale = 1
+        //replace l1extraParticleMap.L1_ExclusiveDoubleIsoEG4_prescale = 1
+        replace l1extraParticleMap.L1_ExclusiveDoubleIsoEG6_prescale = 1
         replace l1extraParticleMap.L1_ExclusiveDoubleJet60_prescale = 1
         replace l1extraParticleMap.L1_ExclusiveJet25_Gap_Jet25_prescale = 1
         replace l1extraParticleMap.L1_IsoEG10_Jet20_ForJet10_prescale = 1

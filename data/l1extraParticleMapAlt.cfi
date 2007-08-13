@@ -101,10 +101,6 @@ module l1extraParticleMap = L1ExtraParticleMapProd {
 	double L1_HTT500_thresh = 500.
 	int32 L1_HTT500_prescale = 1
 
-	double L1_ETM10_thresh = 10.
-	int32 L1_ETM10_prescale = 1000
-	double L1_ETM15_thresh = 15.
-	int32 L1_ETM15_prescale = 300
 	double L1_ETM20_thresh = 20.
 	int32 L1_ETM20_prescale = 10000
 	double L1_ETM30_thresh = 30.
@@ -115,9 +111,6 @@ module l1extraParticleMap = L1ExtraParticleMapProd {
 	int32 L1_ETM50_prescale = 1
 	double L1_ETM60_thresh = 60.
 	int32 L1_ETM60_prescale = 1
-
-	double L1_ETT60_thresh = 60.
-	int32 L1_ETT60_prescale = 1
 
 	double L1_DoubleMu3_thresh = 3.
 	int32 L1_DoubleMu3_prescale = 1
@@ -322,9 +315,8 @@ module l1extraParticleMap = L1ExtraParticleMapProd {
 	double L1_QuadJet30_thresh = 30.
 	int32 L1_QuadJet30_prescale = 1
 
-        double L1_ExclusiveDoubleIsoEG4_thresh1 = 4.
-        double L1_ExclusiveDoubleIsoEG4_thresh2 = 10.
-        int32 L1_ExclusiveDoubleIsoEG4_prescale = 1
+        double L1_ExclusiveDoubleIsoEG6_thresh = 6.
+	int32 L1_ExclusiveDoubleIsoEG6_prescale = 1
         double L1_ExclusiveDoubleJet60_thresh = 60.
         int32 L1_ExclusiveDoubleJet60_prescale = 1
         double L1_ExclusiveJet25_Gap_Jet25_thresh = 25.

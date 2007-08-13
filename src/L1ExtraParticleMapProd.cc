@@ -8,7 +8,7 @@
 //
 // Original Author:  Werner Sun
 //         Created:  Mon Oct 16 23:19:38 EDT 2006
-// $Id: L1ExtraParticleMapProd.cc,v 1.27 2007/08/07 01:21:23 wsun Exp $
+// $Id: L1ExtraParticleMapProd.cc,v 1.28 2007/08/08 03:49:05 wsun Exp $
 //
 //
 
@@ -252,14 +252,14 @@ L1ExtraParticleMapProd::L1ExtraParticleMapProd(
    prescales_[ L1ParticleMap::kHTT500 ] =
       iConfig.getParameter< int >( "L1_HTT500_prescale" ) ;
 
-   singleThresholds_[ L1ParticleMap::kETM10 ] =
-      iConfig.getParameter< double >( "L1_ETM10_thresh" ) ;
-   prescales_[ L1ParticleMap::kETM10 ] =
-      iConfig.getParameter< int >( "L1_ETM10_prescale" ) ;
-   singleThresholds_[ L1ParticleMap::kETM15 ] =
-      iConfig.getParameter< double >( "L1_ETM15_thresh" ) ;
-   prescales_[ L1ParticleMap::kETM15 ] =
-      iConfig.getParameter< int >( "L1_ETM15_prescale" ) ;
+//    singleThresholds_[ L1ParticleMap::kETM10 ] =
+//       iConfig.getParameter< double >( "L1_ETM10_thresh" ) ;
+//    prescales_[ L1ParticleMap::kETM10 ] =
+//       iConfig.getParameter< int >( "L1_ETM10_prescale" ) ;
+//    singleThresholds_[ L1ParticleMap::kETM15 ] =
+//       iConfig.getParameter< double >( "L1_ETM15_thresh" ) ;
+//    prescales_[ L1ParticleMap::kETM15 ] =
+//       iConfig.getParameter< int >( "L1_ETM15_prescale" ) ;
    singleThresholds_[ L1ParticleMap::kETM20 ] =
       iConfig.getParameter< double >( "L1_ETM20_thresh" ) ;
    prescales_[ L1ParticleMap::kETM20 ] =
@@ -281,10 +281,10 @@ L1ExtraParticleMapProd::L1ExtraParticleMapProd(
    prescales_[ L1ParticleMap::kETM60 ] =
       iConfig.getParameter< int >( "L1_ETM60_prescale" ) ;
 
-   singleThresholds_[ L1ParticleMap::kETT60 ] =
-      iConfig.getParameter< double >( "L1_ETT60_thresh" ) ;
-   prescales_[ L1ParticleMap::kETT60 ] =
-      iConfig.getParameter< int >( "L1_ETT60_prescale" ) ;
+//    singleThresholds_[ L1ParticleMap::kETT60 ] =
+//       iConfig.getParameter< double >( "L1_ETT60_thresh" ) ;
+//    prescales_[ L1ParticleMap::kETT60 ] =
+//       iConfig.getParameter< int >( "L1_ETT60_prescale" ) ;
 
    // AA triggers
 
@@ -679,12 +679,16 @@ L1ExtraParticleMapProd::L1ExtraParticleMapProd(
       iConfig.getParameter< int >( "L1_QuadJet30_prescale" ) ;
 
    // Diffractive triggers
-   doubleThresholds_[ L1ParticleMap::kExclusiveDoubleIsoEG4 ].first =
-        iConfig.getParameter< double >( "L1_ExclusiveDoubleIsoEG4_thresh1" );
-   doubleThresholds_[ L1ParticleMap::kExclusiveDoubleIsoEG4 ].second =
-        iConfig.getParameter< double >( "L1_ExclusiveDoubleIsoEG4_thresh2" ); // for jet rejection
-   prescales_[ L1ParticleMap::kExclusiveDoubleIsoEG4 ] =
-        iConfig.getParameter< int >( "L1_ExclusiveDoubleIsoEG4_prescale" ) ;
+   singleThresholds_[ L1ParticleMap::kExclusiveDoubleIsoEG6 ] =
+        iConfig.getParameter< double >( "L1_ExclusiveDoubleIsoEG6_thresh" ); 
+   prescales_[ L1ParticleMap::kExclusiveDoubleIsoEG6 ] =
+      iConfig.getParameter< int >( "L1_ExclusiveDoubleIsoEG6_prescale" ) ;
+//    doubleThresholds_[ L1ParticleMap::kExclusiveDoubleIsoEG4 ].first =
+//         iConfig.getParameter< double >( "L1_ExclusiveDoubleIsoEG4_thresh1" );
+//    doubleThresholds_[ L1ParticleMap::kExclusiveDoubleIsoEG4 ].second =
+//         iConfig.getParameter< double >( "L1_ExclusiveDoubleIsoEG4_thresh2" ); // for jet rejection
+//    prescales_[ L1ParticleMap::kExclusiveDoubleIsoEG4 ] =
+//         iConfig.getParameter< int >( "L1_ExclusiveDoubleIsoEG4_prescale" ) ;
    singleThresholds_[ L1ParticleMap::kExclusiveDoubleJet60 ] =
         iConfig.getParameter< double >( "L1_ExclusiveDoubleJet60_thresh"  ); 
    prescales_[ L1ParticleMap::kExclusiveDoubleJet60 ] =
@@ -800,7 +804,7 @@ L1ExtraParticleMapProd::produce(edm::Event& iEvent,
 
    double met = metHandle->etMiss() ;
    double ht = metHandle->etHad() ;
-   double ett = metHandle->etTotal() ;
+//    double ett = metHandle->etTotal() ;
 
    // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    // ~~~ Evaluate trigger conditions and make a L1ParticleMapCollection. ~~~
@@ -966,8 +970,8 @@ L1ExtraParticleMapProd::produce(edm::Event& iEvent,
 	    metRefTmp = L1EtMissParticleRefProd( metHandle ) ;
 	 }
       }
-      else if( itrig == L1ParticleMap::kETM10 ||
-	       itrig == L1ParticleMap::kETM15 ||
+      else if( //itrig == L1ParticleMap::kETM10 ||
+	       //itrig == L1ParticleMap::kETM15 ||
 	       itrig == L1ParticleMap::kETM20 ||
 	       itrig == L1ParticleMap::kETM30 ||
 	       itrig == L1ParticleMap::kETM40 ||
@@ -982,16 +986,16 @@ L1ExtraParticleMapProd::produce(edm::Event& iEvent,
 	    metRefTmp = L1EtMissParticleRefProd( metHandle ) ;
 	 }
       }
-      else if( itrig == L1ParticleMap::kETT60 )
-      {
-	 objectTypes.push_back( L1ParticleMap::kEtTotal ) ;
+//       else if( itrig == L1ParticleMap::kETT60 )
+//       {
+// 	 objectTypes.push_back( L1ParticleMap::kEtTotal ) ;
 
-	 if( ett >= singleThresholds_[ itrig ] )
-	 {
-	    decision = true ;
-	    metRefTmp = L1EtMissParticleRefProd( metHandle ) ;
-	 }
-      }
+// 	 if( ett >= singleThresholds_[ itrig ] )
+// 	 {
+// 	    decision = true ;
+// 	    metRefTmp = L1EtMissParticleRefProd( metHandle ) ;
+// 	 }
+//       }
       else if( itrig == L1ParticleMap::kDoubleMu3 )
       {
 	 objectTypes.push_back( L1ParticleMap::kMuon ) ;
@@ -1754,19 +1758,33 @@ L1ExtraParticleMapProd::produce(edm::Event& iEvent,
 					outputJetRefsTmp,
 					combosTmp ) ;
       }
-      else if( itrig == L1ParticleMap::kExclusiveDoubleIsoEG4 )
+//       else if( itrig == L1ParticleMap::kExclusiveDoubleIsoEG4 )
+//       {
+//          objectTypes.push_back( L1ParticleMap::kEM ) ;
+//          objectTypes.push_back( L1ParticleMap::kEM ) ;
+
+//          evaluateDoubleExclusiveIsoEG(inputIsoEmRefs,
+//                                       inputJetRefs,
+//                                       doubleThresholds_[ itrig ].first,
+//                                       doubleThresholds_[ itrig ].second,
+//                                       decision,
+//                                       outputEmRefsTmp,
+//                                       combosTmp);
+
+//       }
+      else if( itrig == L1ParticleMap::kExclusiveDoubleIsoEG6 )
       {
-         objectTypes.push_back( L1ParticleMap::kEM ) ;
+	 objectTypes.push_back( L1ParticleMap::kEM ) ;
          objectTypes.push_back( L1ParticleMap::kEM ) ;
 
-         evaluateDoubleExclusiveIsoEG(inputIsoEmRefs,
-                                      inputJetRefs,
-                                      doubleThresholds_[ itrig ].first,
-                                      doubleThresholds_[ itrig ].second,
-                                      decision,
-                                      outputEmRefsTmp,
-                                      combosTmp);
-
+         if( inputJetRefs.size() == 2 ) 
+         {
+	    evaluateDoubleSameObjectTrigger( inputIsoEmRefs,
+					     singleThresholds_[ itrig ],
+					     decision,
+					     outputEmRefsTmp,
+					     combosTmp ) ;
+         }
       }
       else if( itrig == L1ParticleMap::kExclusiveDoubleJet60 )
       {
@@ -2594,43 +2612,43 @@ L1ExtraParticleMapProd::evaluateForwardRapidityGap(
    }
 }
 
-void
-L1ExtraParticleMapProd::evaluateDoubleExclusiveIsoEG(
-   const l1extra::L1EmParticleVectorRef& inputRefs1,         // input
-   const l1extra::L1JetParticleVectorRef& inputRefs2,        // input
-   const double& etThreshold1,                                // input
-   const double& etThreshold2,                                // input
-   bool& decision,                                            // output
-   l1extra::L1EmParticleVectorRef& outputRefs1,               // output
-   l1extra::L1ParticleMap::L1IndexComboVector& combos )       // output
-{
-   if ( inputRefs1.size() ==2 )
-      {  // 2 iso EG
-         decision=true;
-         if (inputRefs2.size()>0)
-            {   // should veto if there are jets, with pt>thresh
-               for( size_t j = 0 ; j < inputRefs2.size() ; ++j )
-                  {
-                     if(inputRefs2[j].get()->gctJetCand()->regionId() ==
-			inputRefs1[0].get()->gctEmCand()->regionId())continue;
-                     if(inputRefs2[j].get()->gctJetCand()->regionId() ==
-			inputRefs1[1].get()->gctEmCand()->regionId())continue;
-                     if(inputRefs2[j].get()->et( )> etThreshold2  ) {
-		       decision=false; break; }
-		     // break : for a faster algorithm
-                  }
-            }
-         if(decision)
-           {   // threshold evaluation for the Exclusive double isoEG
-              decision = false;
-              evaluateDoubleSameObjectTrigger( inputRefs1,
-                                               etThreshold1,
-                                               decision,
-                                               outputRefs1,
-                                               combos ) ;
-           }
-      }
-}
+// void
+// L1ExtraParticleMapProd::evaluateDoubleExclusiveIsoEG(
+//    const l1extra::L1EmParticleVectorRef& inputRefs1,         // input
+//    const l1extra::L1JetParticleVectorRef& inputRefs2,        // input
+//    const double& etThreshold1,                                // input
+//    const double& etThreshold2,                                // input
+//    bool& decision,                                            // output
+//    l1extra::L1EmParticleVectorRef& outputRefs1,               // output
+//    l1extra::L1ParticleMap::L1IndexComboVector& combos )       // output
+// {
+//    if ( inputRefs1.size() ==2 )
+//       {  // 2 iso EG
+//          decision=true;
+//          if (inputRefs2.size()>0)
+//             {   // should veto if there are jets, with pt>thresh
+//                for( size_t j = 0 ; j < inputRefs2.size() ; ++j )
+//                   {
+//                      if(inputRefs2[j].get()->gctJetCand()->regionId() ==
+// 			inputRefs1[0].get()->gctEmCand()->regionId())continue;
+//                      if(inputRefs2[j].get()->gctJetCand()->regionId() ==
+// 			inputRefs1[1].get()->gctEmCand()->regionId())continue;
+//                      if(inputRefs2[j].get()->et( )> etThreshold2  ) {
+// 		       decision=false; break; }
+// 		     // break : for a faster algorithm
+//                   }
+//             }
+//          if(decision)
+//            {   // threshold evaluation for the Exclusive double isoEG
+//               decision = false;
+//               evaluateDoubleSameObjectTrigger( inputRefs1,
+//                                                etThreshold1,
+//                                                decision,
+//                                                outputRefs1,
+//                                                combos ) ;
+//            }
+//       }
+// }
 
 
 //define this as a plug-in
