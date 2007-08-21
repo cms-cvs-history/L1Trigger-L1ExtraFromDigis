@@ -152,5 +152,5 @@
         replace l1extraParticleMap.L1_ExclusiveJet25_Gap_Jet25_prescale = 1
         replace l1extraParticleMap.L1_IsoEG10_Jet20_ForJet10_prescale = 1
 
-	//replace l1extraParticleMap.L1_MinBias_HTT10_prescale = 3000000
-	//replace l1extraParticleMap.L1_ZeroBias_prescale = 3000000
+	replace l1extraParticleMap.L1_MinBias_HTT10_prescale = 10000
+	replace l1extraParticleMap.L1_ZeroBias_prescale = 10000
