@@ -8,7 +8,7 @@
 //
 // Original Author:  Werner Sun
 //         Created:  Mon Oct  2 22:45:32 EDT 2006
-// $Id: L1ExtraParticlesProd.cc,v 1.16 2007/12/18 03:31:13 wsun Exp $
+// $Id: L1ExtraParticlesProd.cc,v 1.17 2007/12/18 04:08:05 wsun Exp $
 //
 //
 
@@ -37,6 +37,8 @@
 
 #include "CondFormats/L1TObjects/interface/L1MuTriggerScales.h"
 #include "CondFormats/DataRecord/interface/L1MuTriggerScalesRcd.h"
+#include "CondFormats/L1TObjects/interface/L1MuTriggerPtScale.h"
+#include "CondFormats/DataRecord/interface/L1MuTriggerPtScaleRcd.h"
 #include "DataFormats/L1GlobalMuonTrigger/interface/L1MuGMTReadoutCollection.h"
 
 #include "FWCore/MessageLogger/interface/MessageLogger.h"
@@ -130,6 +132,9 @@ L1ExtraParticlesProd::produce( edm::Event& iEvent,
       ESHandle< L1MuTriggerScales > muScales ;
       iSetup.get< L1MuTriggerScalesRcd >().get( muScales ) ;
 
+      ESHandle< L1MuTriggerPtScale > muPtScale ;
+      iSetup.get< L1MuTriggerPtScaleRcd >().get( muPtScale ) ;
+
       Handle< L1MuGMTReadoutCollection > hwMuCollection ;
       iEvent.getByLabel( muonSource_, hwMuCollection ) ;
 
@@ -158,7 +163,8 @@ L1ExtraParticlesProd::produce( edm::Event& iEvent,
 	 {
 	    // keep x and y components non-zero and protect against roundoff.
 	    double pt =
-	      muScales->getPtScale()->getLowEdge( muItr->ptIndex() ) + 1.e-6 ;
+	      muPtScale->getPtScale()->getLowEdge( muItr->ptIndex() ) + 1.e-6 ;
+	    //	      muScales->getPtScale()->getLowEdge( muItr->ptIndex() ) + 1.e-6 ;
 
 	    double eta =
 	       muScales->getGMTEtaScale()->getCenter( muItr->etaIndex() ) ;
