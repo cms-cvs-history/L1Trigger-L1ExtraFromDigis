@@ -10,5 +10,4 @@ module l1extraParticles = L1ExtraParticlesProd {
 	InputTag etTotalSource = gctDigis
 	InputTag etHadSource = gctDigis
 	InputTag etMissSource = gctDigis
-	bool centralBxOnly = true
 }
